@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="FLORA MYTHICA — an immersive cinematic journey through the world's most legendary plants." />
+  <title>Flora Mythica · The Legendary Botany</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Space+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Ambient layers -->
+  <div class="grain" aria-hidden="true"></div>
+  <div class="vignette" aria-hidden="true"></div>
+  <div class="cursor" id="cursor" aria-hidden="true"></div>
+  <div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+
+  <!-- Loader -->
+  <div class="loader" id="loader">
+    <div class="loader__inner">
+      <span class="loader__mark">✦</span>
+      <span class="loader__text">Flora Mythica</span>
+      <div class="loader__bar"><i id="loaderBar"></i></div>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <header class="nav" id="nav">
+    <a href="#hero" class="nav__brand">
+      <span class="nav__sigil">✦</span>
+      <span class="nav__name">FLORA<em>MYTHICA</em></span>
+    </a>
+    <nav class="nav__links">
+      <a href="#garden" data-link>Garden</a>
+      <a href="#herbarium" data-link>Herbarium</a>
+      <a href="#lore" data-link>Lore</a>
+      <a href="#atlas" data-link>Atlas</a>
+    </nav>
+    <button class="nav__toggle" id="navToggle" aria-label="Menu">
+      <span></span><span></span>
+    </button>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="hero">
+    <div class="hero__sky" data-parallax="0.15"></div>
+    <div class="hero__aurora" data-parallax="0.3"></div>
+    <div class="hero__petals" id="petals" aria-hidden="true"></div>
+
+    <div class="hero__content">
+      <p class="hero__eyebrow" data-reveal>An immersive field guide · MMXXVI</p>
+      <h1 class="hero__title">
+        <span class="line" data-reveal style="--d:.1s">The Plants</span>
+        <span class="line" data-reveal style="--d:.25s">That <em>Breathe</em></span>
+        <span class="line" data-reveal style="--d:.4s">Legend.</span>
+      </h1>
+      <p class="hero__lede" data-reveal style="--d:.6s">
+        Scroll through a living herbarium of myth — where roots remember
+        the gods, and every bloom is a story the world forgot to tell.
+      </p>
+      <div class="hero__cta" data-reveal style="--d:.8s">
+        <a href="#garden" class="btn btn--solid" data-link>Enter the Garden</a>
+        <a href="#lore" class="btn btn--ghost" data-link>Read the Lore</a>
+      </div>
+    </div>
+
+    <div class="hero__scroll" data-reveal style="--d:1s">
+      <span>Scroll</span>
+      <i></i>
+    </div>
+  </section>
+
+  <!-- Marquee -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track">
+      <span>Yggdrasil</span><span class="dot">✦</span>
+      <span>Lotus of Eternity</span><span class="dot">✦</span>
+      <span>Mandrake</span><span class="dot">✦</span>
+      <span>Amanita</span><span class="dot">✦</span>
+      <span>Baobab of Souls</span><span class="dot">✦</span>
+      <span>Narcissus</span><span class="dot">✦</span>
+      <span>World Tree</span><span class="dot">✦</span>
+      <span>Yggdrasil</span><span class="dot">✦</span>
+      <span>Lotus of Eternity</span><span class="dot">✦</span>
+      <span>Mandrake</span><span class="dot">✦</span>
+      <span>Amanita</span><span class="dot">✦</span>
+      <span>Baobab of Souls</span><span class="dot">✦</span>
+      <span>Narcissus</span><span class="dot">✦</span>
+      <span>World Tree</span><span class="dot">✦</span>
+    </div>
+  </div>
+
+  <!-- Garden / Featured -->
+  <section class="garden" id="garden">
+    <div class="section-head" data-reveal>
+      <p class="section-head__kicker">I · The Garden</p>
+      <h2 class="section-head__title">Specimens of the <em>Mythic</em></h2>
+      <p class="section-head__sub">Six plants that the old stories refused to let die.</p>
+    </div>
+
+    <div class="cards" id="cards">
+      <!-- Card: Yggdrasil -->
+      <article class="card" data-reveal data-tilt style="--accent:#7ad29b">
+        <div class="card__glow"></div>
+        <div class="card__art">
+          <svg viewBox="0 0 200 260" class="art-svg">
+            <defs>
+              <radialGradient id="g1" cx="50%" cy="30%" r="80%">
+                <stop offset="0%" stop-color="#bff5cf"/><stop offset="100%" stop-color="#0c2a1c"/>
+              </radialGradient>
+            </defs>
+            <rect width="200" height="260" fill="url(#g1)"/>
+            <path class="tree" d="M100 250 V150 M100 200 L70 160 M100 200 L130 160 M100 170 L78 130 M100 170 L122 130 M100 150 C80 120 70 90 90 60 M100 150 C120 120 130 90 110 60 M100 110 C90 80 100 50 100 30" stroke="#0c2a1c" stroke-width="4" fill="none" stroke-linecap="round"/>
+            <circle cx="100" cy="28" r="16" fill="#eafff0"/>
+          </svg>
+        </div>
+        <div class="card__body">
+          <p class="card__idx">01</p>
+          <h3 class="card__name">Yggdrasil</h3>
+          <p class="card__tag">The World Ash</p>
+          <p class="card__desc">A column of green fire holding nine realms aloft, its roots drinking from the wells of fate.</p>
+          <span class="card__more">Discover →</span>
+        </div>
+      </article>
+
+      <!-- Card: Lotus -->
+      <article class="card" data-reveal data-tilt style="--accent:#f6c6e6">
+        <div class="card__glow"></div>
+        <div class="card__art">
+          <svg viewBox="0 0 200 260" class="art-svg">
+            <defs>
+              <radialGradient id="g2" cx="50%" cy="70%" r="80%">
+                <stop offset="0%" stop-color="#ffe3f4"/><stop offset="100%" stop-color="#2a0c25"/>
+              </radialGradient>
+            </defs>
+            <rect width="200" height="260" fill="url(#g2)"/>
+            <g fill="#2a0c25" opacity=".85">
+              <path d="M100 200 C70 150 70 90 100 70 C130 90 130 150 100 200Z"/>
+              <path d="M100 200 C55 160 50 110 70 90 C95 120 100 160 100 200Z"/>
+              <path d="M100 200 C145 160 150 110 130 90 C105 120 100 160 100 200Z"/>
+              <path d="M100 200 C40 175 35 135 55 115 C85 140 95 170 100 200Z"/>
+              <path d="M100 200 C160 175 165 135 145 115 C115 140 105 170 100 200Z"/>
+            </g>
+            <circle cx="100" cy="135" r="14" fill="#fff0fb"/>
+          </svg>
+        </div>
+        <div class="card__body">
+          <p class="card__idx">02</p>
+          <h3 class="card__name">Lotus of Eternity</h3>
+          <p class="card__tag">The Unfolding</p>
+          <p class="card__desc">Born of still water at the world's first dawn, it opens and closes the cosmos with a single breath.</p>
+          <span class="card__more">Discover →</span>
+        </div>
+      </article>
+
+      <!-- Card: Mandrake -->
+      <article class="card" data-reveal data-tilt style="--accent:#e8d39a">
+        <div class="card__glow"></div>
+        <div class="card__art">
+          <svg viewBox="0 0 200 260" class="art-svg">
+            <defs>
+              <radialGradient id="g3" cx="50%" cy="65%" r="80%">
+                <stop offset="0%" stop-color="#f4e6bc"/><stop offset="100%" stop-color="#2a230c"/>
+              </radialGradient>
+            </defs>
+            <rect width="200" height="260" fill="url(#g3)"/>
+            <path d="M100 120 C80 150 78 210 100 235 C122 210 120 150 100 120Z" fill="#2a230c"/>
+            <path d="M100 120 C92 95 96 70 100 55 C104 70 108 95 100 120Z" fill="#3a2f10"/>
+            <path d="M100 120 C70 105 50 110 40 95 C70 92 90 100 100 120Z" fill="#3a2f10"/>
+            <path d="M100 120 C130 105 150 110 160 95 C130 92 110 100 100 120Z" fill="#3a2f10"/>
+            <circle cx="100" cy="118" r="6" fill="#fff4d6"/>
+          </svg>
+        </div>
+        <div class="card__body">
+          <p class="card__idx">03</p>
+          <h3 class="card__name">Mandrake</h3>
+          <p class="card__tag">The Screaming Root</p>
+          <p class="card__desc">Pulled from the earth at midnight, it cries a sound no living ear should survive to repeat.</p>
+          <span class="card__more">Discover →</span>
+        </div>
+      </article>
+
+      <!-- Card: Amanita -->
+      <article class="card" data-reveal data-tilt style="--accent:#f2a0a0">
+        <div class="card__glow"></div>
+        <div class="card__art">
+          <svg viewBox="0 0 200 260" class="art-svg">
+            <defs>
+              <radialGradient id="g4" cx="50%" cy="35%" r="80%">
+                <stop offset="0%" stop-color="#ffd6d6"/><stop offset="100%" stop-color="#2a0c0c"/>
+              </radialGradient>
+            </defs>
+            <rect width="200" height="260" fill="url(#g4)"/>
+            <path d="M40 120 C40 60 160 60 160 120 C160 135 40 135 40 120Z" fill="#c9302c"/>
+            <ellipse cx="70" cy="100" rx="9" ry="7" fill="#ffe9e9"/>
+            <ellipse cx="120" cy="108" rx="7" ry="6" fill="#ffe9e9"/>
+            <ellipse cx="100" cy="85" rx="8" ry="6" fill="#ffe9e9"/>
+            <rect x="86" y="125" width="28" height="80" rx="12" fill="#f3e6d2"/>
+          </svg>
+        </div>
+        <div class="card__body">
+          <p class="card__idx">04</p>
+          <h3 class="card__name">Amanita</h3>
+          <p class="card__tag">The Seer's Cap</p>
+          <p class="card__desc">Beneath its spotted crown, the veil between worlds grows thin enough to walk through.</p>
+          <span class="card__more">Discover →</span>
+        </div>
+      </article>
+
+      <!-- Card: Baobab -->
+      <article class="card" data-reveal data-tilt style="--accent:#cdb892">
+        <div class="card__glow"></div>
+        <div class="card__art">
+          <svg viewBox="0 0 200 260" class="art-svg">
+            <defs>
+              <radialGradient id="g5" cx="50%" cy="55%" r="80%">
+                <stop offset="0%" stop-color="#efe0c4"/><stop offset="100%" stop-color="#241f12"/>
+              </radialGradient>
+            </defs>
+            <rect width="200" height="260" fill="url(#g5)"/>
+            <path d="M70 250 C60 200 55 170 80 150 C70 120 90 100 100 100 C110 100 130 120 120 150 C145 170 140 200 130 250Z" fill="#241f12"/>
+            <path d="M100 100 C70 80 60 60 70 50 M100 100 C130 80 140 60 130 50 M100 100 C100 70 100 50 100 40" stroke="#241f12" stroke-width="5" fill="none" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="card__body">
+          <p class="card__idx">05</p>
+          <h3 class="card__name">Baobab of Souls</h3>
+          <p class="card__tag">The Upside-Down Tree</p>
+          <p class="card__desc">Planted by the gods and flung to earth, it keeps its roots in the sky and its memory in the soil.</p>
+          <span class="card__more">Discover →</span>
+        </div>
+      </article>
+
+      <!-- Card: Narcissus -->
+      <article class="card" data-reveal data-tilt style="--accent:#a9d4f2">
+        <div class="card__glow"></div>
+        <div class="card__art">
+          <svg viewBox="0 0 200 260" class="art-svg">
+            <defs>
+              <radialGradient id="g6" cx="50%" cy="40%" r="80%">
+                <stop offset="0%" stop-color="#dff0ff"/><stop offset="100%" stop-color="#0c1f2a"/>
+              </radialGradient>
+            </defs>
+            <rect width="200" height="260" fill="url(#g6)"/>
+            <path d="M100 230 V110" stroke="#0c1f2a" stroke-width="4" stroke-linecap="round"/>
+            <path d="M100 160 C60 150 50 120 55 100 M100 140 C140 130 150 100 145 80" stroke="#0c1f2a" stroke-width="3" fill="none" stroke-linecap="round"/>
+            <g fill="#0c1f2a"><ellipse cx="100" cy="90" rx="22" ry="30"/><circle cx="100" cy="90" r="12" fill="#ffe9a8"/></g>
+          </svg>
+        </div>
+        <div class="card__body">
+          <p class="card__idx">06</p>
+          <h3 class="card__name">Narcissus</h3>
+          <p class="card__tag">The Mirror Bloom</p>
+          <p class="card__desc">It blooms once above still water, and whoever meets its gaze forgets the shore entirely.</p>
+          <span class="card__more">Discover →</span>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Lore / Cinematic split -->
+  <section class="lore" id="lore">
+    <div class="lore__media" data-parallax="0.12">
+      <div class="lore__orb"></div>
+      <div class="lore__ring"></div>
+    </div>
+    <div class="lore__text">
+      <p class="section-head__kicker" data-reveal>II · The Lore</p>
+      <h2 class="lore__title" data-reveal>Every leaf is a <em>letter</em><br/>the earth wrote to us.</h2>
+      <p class="lore__para" data-reveal>
+        Long before botanists gave names to things, the world spoke in roots and
+        petals. A plant was not a specimen — it was a pact. The lotus promised
+        rebirth; the mandrake guarded the threshold; the world-tree held the
+        ceiling of the sky so the stars would not fall.
+      </p>
+      <p class="lore__para" data-reveal>
+        Flora Mythica gathers these pacts into a single, breathing atlas — part
+        herbarium, part confession. Read it slowly. The garden listens.
+      </p>
+      <div class="lore__stats">
+        <div class="stat" data-reveal><span class="stat__num" data-count="9">0</span><span class="stat__lbl">Realms held</span></div>
+        <div class="stat" data-reveal><span class="stat__num" data-count="6">0</span><span class="stat__lbl">Legendary species</span></div>
+        <div class="stat" data-reveal><span class="stat__num" data-count="1000">0</span><span class="stat__lbl">Years of lore</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Herbarium / Quote -->
+  <section class="herbarium" id="herbarium">
+    <blockquote class="herbarium__quote" data-reveal>
+      <span class="herbarium__mark">“</span>
+      To know a mythic plant is to be changed by it. You do not pick the flower.
+      The flower picks the season you will remember for the rest of your life.
+      <cite>— The Keeper's Marginalia</cite>
+    </blockquote>
+  </section>
+
+  <!-- Atlas -->
+  <section class="atlas" id="atlas">
+    <div class="section-head" data-reveal>
+      <p class="section-head__kicker">III · The Atlas</p>
+      <h2 class="section-head__title">Where the <em>legends</em> grow</h2>
+    </div>
+    <div class="atlas__grid">
+      <div class="atlas__item" data-reveal><span class="atlas__pin">✦</span><h4>Asgard's Canopy</h4><p>Realm of the ash, where roots drink prophecy.</p></div>
+      <div class="atlas__item" data-reveal><span class="atlas__pin">✦</span><h4>The Still Lakes</h4><p>Birthwater of the lotus, at the world's first dawn.</p></div>
+      <div class="atlas__item" data-reveal><span class="atlas__pin">✦</span><h4>Midnight Fields</h4><p>Where the mandrake is pulled, and silence screams.</p></div>
+      <div class="atlas__item" data-reveal><span class="atlas__pin">✦</span><h4>The Fae Clearing</h4><p>Home of the amanita and the thin, walking veil.</p></div>
+      <div class="atlas__item" data-reveal><span class="atlas__pin">✦</span><h4>Savanna of Memory</h4><p>The baobab keeps the soil's oldest dreams.</p></div>
+      <div class="atlas__item" data-reveal><span class="atlas__pin">✦</span><h4>The Glass Pool</h4><p>Where narcissus opens and the shore dissolves.</p></div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <div class="cta__inner" data-reveal>
+      <h2 class="cta__title">Plant a <em>legend</em> in your own garden.</h2>
+      <p class="cta__sub">Join the herbarium and receive a new mythic specimen each season.</p>
+      <form class="cta__form" id="ctaForm" novalidate>
+        <input type="email" placeholder="your@email.com" aria-label="Email" required />
+        <button type="submit" class="btn btn--solid">Subscribe</button>
+      </form>
+      <p class="cta__note" id="ctaNote" hidden>Welcome to the garden. ✦</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer__top">
+      <span class="footer__brand">FLORA<em>MYTHICA</em></span>
+      <nav class="footer__nav">
+        <a href="#garden" data-link>Garden</a>
+        <a href="#herbarium" data-link>Herbarium</a>
+        <a href="#lore" data-link>Lore</a>
+        <a href="#atlas" data-link>Atlas</a>
+      </nav>
+    </div>
+    <div class="footer__bottom">
+      <span>© MMXXVI Flora Mythica — A cinematic field guide.</span>
+      <span>Crafted under moonlight, watered by story.</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
