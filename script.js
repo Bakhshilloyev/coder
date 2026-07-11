@@ -180,4 +180,98 @@
       }
     });
   }
+
+  /* ---------- Specimen modal ---------- */
+  const specimens = {
+    yggdrasil: {
+      idx: "01", name: "Yggdrasil", tag: "The World Ash",
+      desc: "A column of green fire holding nine realms aloft, its roots drinking from the wells of fate. The ash does not grow so much as it listens — every branch a road the gods have walked, every root a question the dead still ask. To sit beneath it is to hear the weather of other worlds.",
+      facts: [["Realm", "Asgard's Canopy"], ["Lifespan", "Eternal"], ["Element", "Sky & Root"], ["Keeper", "The Norns"]]
+    },
+    lotus: {
+      idx: "02", name: "Lotus of Eternity", tag: "The Unfolding",
+      desc: "Born of still water at the world's first dawn, it opens and closes the cosmos with a single breath. Each petal is a season the universe has not yet lived; each closing, a secret it chooses to keep. Drink from its cup, the old texts warn, and you will forget every sorrow — and every name.",
+      facts: [["Realm", "The Still Lakes"], ["Bloom", "At first dawn"], ["Element", "Water & Light"], ["Keeper", "The Dawn Maidens"]]
+    },
+    mandrake: {
+      idx: "03", name: "Mandrake", tag: "The Screaming Root",
+      desc: "Pulled from the earth at midnight, it cries a sound no living ear should survive to repeat. The wise bind its stem to a fleeing dog and cover their ears with wax. What remains is a root shaped like a sleeping child — and a power that bends luck, love, and the door between life and death.",
+      facts: [["Realm", "Midnight Fields"], ["Harvest", "At midnight"], ["Element", "Earth & Voice"], ["Keeper", "The Root-Witch"]]
+    },
+    amanita: {
+      idx: "04", name: "Amanita", tag: "The Seer's Cap",
+      desc: "Beneath its spotted crown, the veil between worlds grows thin enough to walk through. The fae wear it as a lamp; the shaman as a key. One bite and the forest begins to speak in colours, the stones to hum, and the self to loosen its grip on what is real.",
+      facts: [["Realm", "The Fae Clearing"], ["Use", "The thinned veil"], ["Element", "Spore & Dream"], ["Keeper", "The Fae"]]
+    },
+    baobab: {
+      idx: "05", name: "Baobab of Souls", tag: "The Upside-Down Tree",
+      desc: "Planted by the gods and flung to earth, it keeps its roots in the sky and its memory in the soil. Elders gather beneath its hollow trunk to settle disputes and to listen — for the baobab remembers every story told in its shade, and forgets none of them.",
+      facts: [["Realm", "Savanna of Memory"], ["Form", "Roots in sky"], ["Element", "Memory & Time"], ["Keeper", "The Elders"]]
+    },
+    narcissus: {
+      idx: "06", name: "Narcissus", tag: "The Mirror Bloom",
+      desc: "It blooms once above still water, and whoever meets its gaze forgets the shore entirely. The flower does not seduce — it simply reflects, and the viewer drowns in the sweetness of their own face. Even the gods have lingered too long at its glassy pool.",
+      facts: [["Realm", "The Glass Pool"], ["Bloom", "Once only"], ["Element", "Mirror & Water"], ["Keeper", "The Drowned"]]
+    }
+  };
+
+  const modal = document.getElementById("modal");
+  const modalArt = document.getElementById("modalArt");
+  const mIdx = document.getElementById("modalIdx");
+  const mName = document.getElementById("modalName");
+  const mTag = document.getElementById("modalTag");
+  const mDesc = document.getElementById("modalDesc");
+  const mFacts = document.getElementById("modalFacts");
+
+  const openModal = (key) => {
+    const s = specimens[key];
+    if (!s || !modal) return;
+    const card = document.querySelector(`.card[data-key="${key}"]`);
+    const accent = card ? card.style.getPropertyValue("--accent") : "#d9b978";
+    modal.style.setProperty("--accent", accent);
+    const svg = card ? card.querySelector(".art-svg").cloneNode(true) : null;
+    modalArt.innerHTML = "";
+    if (svg) modalArt.appendChild(svg);
+    mIdx.textContent = s.idx;
+    mName.textContent = s.name;
+    mTag.textContent = s.tag;
+    mDesc.textContent = s.desc;
+    mFacts.innerHTML = s.facts
+      .map((f) => `<li><span>${f[0]}</span><span>${f[1]}</span></li>`)
+      .join("");
+    modal.classList.add("open");
+    modal.setAttribute("aria-hidden", "false");
+    document.body.style.overflow = "hidden";
+  };
+  const closeModal = () => {
+    if (!modal) return;
+    modal.classList.remove("open");
+    modal.setAttribute("aria-hidden", "true");
+    document.body.style.overflow = "";
+  };
+
+  document.querySelectorAll(".card[data-key]").forEach((card) => {
+    card.style.cursor = "none";
+    card.addEventListener("click", () => openModal(card.dataset.key));
+    card.addEventListener("keydown", (e) => {
+      if (e.key === "Enter" || e.key === " ") { e.preventDefault(); openModal(card.dataset.key); }
+    });
+    card.setAttribute("tabindex", "0");
+    card.setAttribute("role", "button");
+  });
+  if (modal) {
+    modal.querySelectorAll("[data-close]").forEach((el) => el.addEventListener("click", closeModal));
+    window.addEventListener("keydown", (e) => { if (e.key === "Escape") closeModal(); });
+  }
+
+  /* ---------- Back to top ---------- */
+  const totop = document.getElementById("totop");
+  if (totop) {
+    window.addEventListener("scroll", () => {
+      totop.classList.toggle("show", window.scrollY > 700);
+    }, { passive: true });
+    totop.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: reduceMotion ? "auto" : "smooth" });
+    });
+  }
 })();

@@ -263,6 +263,49 @@ em { font-style: italic; color: var(--gold-soft); }
 .footer__nav a:hover { color: var(--gold); }
 .footer__bottom { display: flex; justify-content: space-between; flex-wrap: wrap; gap: .8rem; margin-top: 2.4rem; color: var(--ink-dim); font-size: .78rem; letter-spacing: .05em; }
 
+/* ---------- Specimen modal ---------- */
+.modal {
+  position: fixed; inset: 0; z-index: 9700; display: grid; place-items: center;
+  padding: 1.2rem; opacity: 0; visibility: hidden; transition: opacity .5s var(--ease), visibility .5s;
+}
+.modal.open { opacity: 1; visibility: visible; }
+.modal__backdrop { position: absolute; inset: 0; background: rgba(2,4,6,0.82); backdrop-filter: blur(8px); }
+.modal__panel {
+  position: relative; z-index: 1; display: grid; grid-template-columns: 1fr 1.1fr; gap: 0;
+  width: min(940px, 100%); max-height: 88vh; overflow: hidden; border-radius: 20px;
+  border: 1px solid var(--line); background: linear-gradient(160deg, #0c1116, #06090c);
+  transform: translateY(30px) scale(.97); transition: transform .6s var(--ease);
+  box-shadow: 0 40px 120px rgba(0,0,0,0.6);
+}
+.modal.open .modal__panel { transform: none; }
+.modal__close {
+  position: absolute; top: 1rem; right: 1rem; z-index: 2; width: 42px; height: 42px; border-radius: 50%;
+  background: rgba(255,255,255,0.05); border: 1px solid var(--line); color: var(--ink); font-size: .9rem; cursor: none;
+  transition: .3s;
+}
+.modal__close:hover { background: var(--gold); color: #1a1304; transform: rotate(90deg); }
+.modal__art { position: relative; min-height: 320px; background: radial-gradient(80% 80% at 50% 40%, color-mix(in srgb, var(--accent) 30%, transparent), transparent); }
+.modal__art .art-svg { width: 100%; height: 100%; object-fit: cover; }
+.modal__body { padding: clamp(1.8rem, 4vw, 3rem); overflow-y: auto; }
+.modal__idx { font-family: var(--serif); font-size: 2.4rem; color: var(--accent); opacity: .6; line-height: 1; }
+.modal__name { font-family: var(--serif); font-weight: 400; font-size: clamp(1.8rem, 4vw, 2.8rem); margin: .3rem 0 .4rem; }
+.modal__tag { font-size: .74rem; letter-spacing: .25em; text-transform: uppercase; color: var(--gold); margin-bottom: 1.2rem; }
+.modal__desc { color: var(--ink-dim); font-size: 1.02rem; line-height: 1.8; }
+.modal__facts { list-style: none; margin-top: 1.8rem; display: grid; gap: .9rem; }
+.modal__facts li { display: flex; justify-content: space-between; gap: 1rem; padding-bottom: .8rem; border-bottom: 1px solid var(--line); font-size: .9rem; }
+.modal__facts li span:first-child { color: var(--ink-dim); letter-spacing: .12em; text-transform: uppercase; font-size: .72rem; align-self: center; }
+.modal__facts li span:last-child { color: var(--ink); text-align: right; font-family: var(--serif); font-size: 1.05rem; }
+
+/* ---------- Back to top ---------- */
+.totop {
+  position: fixed; right: clamp(1rem, 3vw, 2rem); bottom: clamp(1rem, 3vw, 2rem); z-index: 7800;
+  width: 52px; height: 52px; border-radius: 50%; border: 1px solid var(--line); background: rgba(10,15,18,0.7);
+  backdrop-filter: blur(10px); color: var(--gold); font-size: 1.2rem; cursor: none; opacity: 0; visibility: hidden;
+  transform: translateY(20px); transition: .5s var(--ease);
+}
+.totop.show { opacity: 1; visibility: visible; transform: none; }
+.totop:hover { background: var(--gold); color: #1a1304; }
+
 /* ---------- Reveal animation ---------- */
 [data-reveal] { opacity: 0; transform: translateY(34px); transition: opacity 1s var(--ease) var(--d, 0s), transform 1s var(--ease) var(--d, 0s); }
 [data-reveal].in { opacity: 1; transform: none; }
@@ -273,6 +316,10 @@ em { font-style: italic; color: var(--gold-soft); }
   .nav__toggle { display: flex; }
   .lore { grid-template-columns: 1fr; }
   .lore__media { max-width: 360px; margin: 0 auto 2rem; }
+}
+@media (max-width: 720px) {
+  .modal__panel { grid-template-columns: 1fr; max-height: 90vh; }
+  .modal__art { min-height: 220px; }
 }
 @media (prefers-reduced-motion: reduce) {
   * { animation: none !important; transition: none !important; scroll-behavior: auto; }

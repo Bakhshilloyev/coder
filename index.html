@@ -102,7 +102,7 @@
 
     <div class="cards" id="cards">
       <!-- Card: Yggdrasil -->
-      <article class="card" data-reveal data-tilt style="--accent:#7ad29b">
+      <article class="card" data-reveal data-tilt data-key="yggdrasil" style="--accent:#7ad29b">
         <div class="card__glow"></div>
         <div class="card__art">
           <svg viewBox="0 0 200 260" class="art-svg">
@@ -126,7 +126,7 @@
       </article>
 
       <!-- Card: Lotus -->
-      <article class="card" data-reveal data-tilt style="--accent:#f6c6e6">
+      <article class="card" data-reveal data-tilt data-key="lotus" style="--accent:#f6c6e6">
         <div class="card__glow"></div>
         <div class="card__art">
           <svg viewBox="0 0 200 260" class="art-svg">
@@ -156,7 +156,7 @@
       </article>
 
       <!-- Card: Mandrake -->
-      <article class="card" data-reveal data-tilt style="--accent:#e8d39a">
+      <article class="card" data-reveal data-tilt data-key="mandrake" style="--accent:#e8d39a">
         <div class="card__glow"></div>
         <div class="card__art">
           <svg viewBox="0 0 200 260" class="art-svg">
@@ -183,7 +183,7 @@
       </article>
 
       <!-- Card: Amanita -->
-      <article class="card" data-reveal data-tilt style="--accent:#f2a0a0">
+      <article class="card" data-reveal data-tilt data-key="amanita" style="--accent:#f2a0a0">
         <div class="card__glow"></div>
         <div class="card__art">
           <svg viewBox="0 0 200 260" class="art-svg">
@@ -210,7 +210,7 @@
       </article>
 
       <!-- Card: Baobab -->
-      <article class="card" data-reveal data-tilt style="--accent:#cdb892">
+      <article class="card" data-reveal data-tilt data-key="baobab" style="--accent:#cdb892">
         <div class="card__glow"></div>
         <div class="card__art">
           <svg viewBox="0 0 200 260" class="art-svg">
@@ -234,7 +234,7 @@
       </article>
 
       <!-- Card: Narcissus -->
-      <article class="card" data-reveal data-tilt style="--accent:#a9d4f2">
+      <article class="card" data-reveal data-tilt data-key="narcissus" style="--accent:#a9d4f2">
         <div class="card__glow"></div>
         <div class="card__art">
           <svg viewBox="0 0 200 260" class="art-svg">
@@ -325,6 +325,25 @@
       <p class="cta__note" id="ctaNote" hidden>Welcome to the garden. ✦</p>
     </div>
   </section>
+
+  <!-- Specimen modal -->
+  <div class="modal" id="modal" aria-hidden="true">
+    <div class="modal__backdrop" data-close></div>
+    <div class="modal__panel" role="dialog" aria-modal="true" aria-labelledby="modalName">
+      <button class="modal__close" data-close aria-label="Close">✕</button>
+      <div class="modal__art" id="modalArt"></div>
+      <div class="modal__body">
+        <p class="modal__idx" id="modalIdx"></p>
+        <h3 class="modal__name" id="modalName"></h3>
+        <p class="modal__tag" id="modalTag"></p>
+        <p class="modal__desc" id="modalDesc"></p>
+        <ul class="modal__facts" id="modalFacts"></ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Back to top -->
+  <button class="totop" id="totop" aria-label="Back to top">↑</button>
 
   <!-- Footer -->
   <footer class="footer">
