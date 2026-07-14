@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
-# Linux / macOS setup for the Unified AI Agent (pure-Python, minimal deps).
+# Linux / macOS setup for the Goat AI Agent (pure-Python, minimal deps).
 set -euo pipefail
 
-echo "==> Unified AI Agent setup (Linux/macOS)"
+echo "==> Goat AI Agent setup (Linux/macOS)"
 
 python3 -m venv .venv 2>/dev/null || true
 if [ -d .venv ]; then

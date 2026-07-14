@@ -23,7 +23,7 @@ Mutating commands require confirmation. In non-interactive use, set
 `Executor`.
 
 ## Termux: permission denied writing files
-Termux sandboxes storage. The agent uses `~/.termux/unified-agent/data` by
+Termux sandboxes storage. The agent uses `~/.termux/goat-agent/data` by
 default. Set `AGENT_DATA_DIR` or grant storage permissions.
 
 ## Web search returns nothing

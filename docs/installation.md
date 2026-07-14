@@ -13,8 +13,8 @@ when you use the corresponding provider or integration.
 ## Linux / macOS
 
 ```bash
-git clone https://github.com/yourname/unified-ai-agent.git
-cd unified-ai-agent
+git clone https://github.com/yourname/goat-ai-agent.git
+cd goat-ai-agent
 bash scripts/setup.sh
 ```
 
@@ -24,8 +24,8 @@ the `data/` directories.
 ## Windows
 
 ```powershell
-git clone https://github.com/yourname/unified-ai-agent.git
-cd unified-ai-agent
+git clone https://github.com/yourname/goat-ai-agent.git
+cd goat-ai-agent
 pwsh scripts/setup.ps1
 ```
 
@@ -35,12 +35,12 @@ Or double-click `scripts/run_dev.bat`.
 
 ```bash
 pkg install -y python python-pip git
-git clone https://github.com/yourname/unified-ai-agent.git
-cd unified-ai-agent
+git clone https://github.com/yourname/goat-ai-agent.git
+cd goat-ai-agent
 bash scripts/setup_termux.sh
 ```
 
-Termux keeps data inside its sandbox (`~/.termux/unified-agent/data`) to avoid
+Termux keeps data inside its sandbox (`~/.termux/goat-agent/data`) to avoid
 permission issues.
 
 ## Verify

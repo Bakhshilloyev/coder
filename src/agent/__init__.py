@@ -1,4 +1,4 @@
-"""Unified Cross-Platform AI Agent.
+"""Goat AI Agent.
 
 A lightweight, dependency-free AI agent engine designed to run on Linux,
 Windows, and Termux (Android), including 32-bit and weak devices.

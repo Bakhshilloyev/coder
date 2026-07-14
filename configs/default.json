@@ -1,5 +1,5 @@
 {
-  "agent_name": "Unified AI Agent",
+  "agent_name": "Goat AI Agent",
   "default_model": "local",
   "memory_db": "data/memory/agent.db",
   "log_level": "INFO",

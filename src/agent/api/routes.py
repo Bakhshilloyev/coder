@@ -18,7 +18,7 @@ class ApiHandlers:
         if not authorize(headers):
             return 401, {"error": "unauthorized"}
         if path == "/health" and method == "GET":
-            return 200, {"status": "ok", "service": "unified-ai-agent"}
+            return 200, {"status": "ok", "service": "goat-ai-agent"}
         if path == "/v1/models" and method == "GET":
             return 200, {"models": self.agent_factory().models()}
         if path == "/v1/info" and method == "GET":

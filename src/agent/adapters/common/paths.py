@@ -15,9 +15,9 @@ def data_dir() -> str:
     home = os.path.expanduser("~")
     if is_termux():
         # Termux: keep inside the app sandbox to avoid permission issues
-        d = os.path.join(home, ".termux", "unified-agent", "data")
+        d = os.path.join(home, ".termux", "goat-agent", "data")
     else:
-        d = os.path.join(home, ".local", "share", "unified-agent")
+            d = os.path.join(home, ".local", "share", "goat-agent")
     os.makedirs(d, exist_ok=True)
     return d
 

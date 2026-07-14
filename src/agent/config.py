@@ -84,7 +84,7 @@ class Config:
     # -- typed shortcuts ---------------------------------------------------
     @property
     def agent_name(self) -> str:
-        return self.default.get("agent_name", "Unified AI Agent")
+        return self.default.get("agent_name", "Goat AI Agent")
 
     @property
     def default_model(self) -> str:

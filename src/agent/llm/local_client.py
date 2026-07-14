@@ -34,7 +34,7 @@ class LocalProvider(BaseProvider):
     def _respond(self, prompt: str) -> str:
         prompt = (prompt or "").strip()
         if not prompt:
-            return "Hello! I am the offline Unified AI Agent. Ask me to write code, plan a task, or run a command."
+            return "Hello! I am the offline Goat AI Agent. Ask me to write code, plan a task, or run a command."
         if re.search(_CODE_HINTS, prompt, re.IGNORECASE):
             return self._code_response(prompt)
         if re.search(_QUESTION_HINTS, prompt) or "explain" in prompt.lower():

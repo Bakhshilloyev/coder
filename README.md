@@ -1,4 +1,4 @@
-# Unified AI Agent
+# Goat AI Agent
 
 A compact, cross-platform AI agent engine built to run anywhere: **Linux**,
 **Windows**, **Termux (Android)**, and **32-bit / weak devices**.
@@ -15,8 +15,8 @@ A compact, cross-platform AI agent engine built to run anywhere: **Linux**,
 ## Quick start
 
 ```bash
-git clone https://github.com/yourname/unified-ai-agent.git
-cd unified-ai-agent
+git clone https://github.com/yourname/goat-ai-agent.git
+cd goat-ai-agent
 pip install -r requirements.txt          # optional; runs with stdlib only
 python -m agent.main models              # list configured models
 python -m agent.main info                # show platform + agent info

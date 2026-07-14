@@ -12,7 +12,7 @@ from html import unescape
 
 from . import Tool, ToolResult, register
 
-_USER_AGENT = "Mozilla/5.0 (compatible; UnifiedAIAgent/0.1; +https://github.com)"
+_USER_AGENT = "Mozilla/5.0 (compatible; GoatAIAgent/0.1; +https://github.com)"
 
 
 def _get(url: str, timeout: int = 30) -> str:

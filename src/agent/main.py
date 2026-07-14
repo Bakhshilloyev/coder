@@ -1,4 +1,4 @@
-"""Command-line interface for the Unified AI Agent.
+"""Command-line interface for the Goat AI Agent.
 
 Examples
 --------
@@ -19,8 +19,8 @@ from .version import __version__
 
 
 def _build_parser() -> argparse.ArgumentParser:
-    p = argparse.ArgumentParser(prog="agent", description="Unified Cross-Platform AI Agent")
-    p.add_argument("--version", action="version", version=f"unified-ai-agent {__version__}")
+    p = argparse.ArgumentParser(prog="agent", description="Goat AI Agent")
+    p.add_argument("--version", action="version", version=f"goat-ai-agent {__version__}")
     p.add_argument("--provider", default=None, help="LLM provider override (env: MODEL_PROVIDER)")
     p.add_argument("--model", default=None, help="Model name override")
     p.add_argument("--weak", action="store_true", help="Force weak-device mode")

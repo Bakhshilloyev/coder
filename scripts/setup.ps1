@@ -1,7 +1,7 @@
-# Windows setup for the Unified AI Agent (PowerShell).
+# Windows setup for the Goat AI Agent (PowerShell).
 $ErrorActionPreference = "Stop"
 
-Write-Host "==> Unified AI Agent setup (Windows)"
+Write-Host "==> Goat AI Agent setup (Windows)"
 
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1

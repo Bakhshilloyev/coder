@@ -1,5 +1,5 @@
 {
-  "name": "unified-ai-agent",
+  "name": "goat-ai-agent",
   "version": "0.1.0",
   "description": "Cross-platform AI agent (Linux, Windows, Termux) with a pure-Python core and optional web UI.",
   "type": "module",

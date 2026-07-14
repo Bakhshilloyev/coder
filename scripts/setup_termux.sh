@@ -2,7 +2,7 @@
 # Termux (Android) setup. Keeps deps minimal and avoids root.
 set -euo pipefail
 
-echo "==> Unified AI Agent setup (Termux)"
+echo "==> Goat AI Agent setup (Termux)"
 
 pkg update -y
 pkg install -y python python-pip

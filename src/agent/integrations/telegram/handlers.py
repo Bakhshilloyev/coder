@@ -10,7 +10,7 @@ def register_handlers(application) -> None:
     from telegram.ext import CommandHandler
 
     async def start(update, context):
-        await update.message.reply_text("Unified AI Agent online. Send me a task.")
+        await update.message.reply_text("Goat AI Agent online. Send me a task.")
 
     async def models(update, context):
         from ...app import get_agent

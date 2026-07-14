@@ -39,7 +39,7 @@ def make_handler(handlers: ApiHandlers):
 def run_server(host: str = "127.0.0.1", port: int = 8000, provider=None, model=None) -> None:
     handlers = ApiHandlers(lambda: get_agent(provider=provider, model=model))
     httpd = ThreadingHTTPServer((host, port), make_handler(handlers))
-    print(f"Unified AI Agent API listening on http://{host}:{port}")
+    print(f"Goat AI Agent API listening on http://{host}:{port}")
     print("Endpoints: /health /v1/models /v1/info /v1/chat /v1/run")
     try:
         httpd.serve_forever()

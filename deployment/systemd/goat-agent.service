@@ -1,14 +1,14 @@
 [Unit]
-Description=Unified AI Agent API server
+Description=Goat AI Agent API server
 After=network.target
 
 [Service]
-WorkingDirectory=/opt/unified-ai-agent
-Environment=PYTHONPATH=/opt/unified-ai-agent/src
+WorkingDirectory=/opt/goat-ai-agent
+Environment=PYTHONPATH=/opt/goat-ai-agent/src
 Environment=MODEL_PROVIDER=local
 ExecStart=/usr/bin/python3 -m agent.main server --host 127.0.0.1 --port 8000
 Restart=on-failure
-User=unified-agent
+User=goat-agent
 
 [Install]
 WantedBy=multi-user.target
