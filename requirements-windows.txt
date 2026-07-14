@@ -1,1 +1,1 @@
-# Keep minimal for Windows
+# Windows-specific optional dependencies (install only if you use the feature).

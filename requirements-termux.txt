@@ -1,1 +1,1 @@
-# Keep minimal for Termux
+# Termux (Android) specific optional dependencies. Avoid heavy native builds.

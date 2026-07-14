@@ -1,0 +1,10 @@
+{
+  "agent_name": "Unified AI Agent",
+  "default_model": "local",
+  "memory_db": "data/memory/agent.db",
+  "log_level": "INFO",
+  "weak_device_mode": true,
+  "max_tool_turns": 12,
+  "confirm_shell": false,
+  "allow_network": false
+}

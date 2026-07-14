@@ -1,1 +1,1 @@
-# Keep minimal for Linux
+# Linux-specific optional dependencies (install only if you use the feature).

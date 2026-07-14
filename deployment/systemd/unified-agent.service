@@ -1,0 +1,14 @@
+[Unit]
+Description=Unified AI Agent API server
+After=network.target
+
+[Service]
+WorkingDirectory=/opt/unified-ai-agent
+Environment=PYTHONPATH=/opt/unified-ai-agent/src
+Environment=MODEL_PROVIDER=local
+ExecStart=/usr/bin/python3 -m agent.main server --host 127.0.0.1 --port 8000
+Restart=on-failure
+User=unified-agent
+
+[Install]
+WantedBy=multi-user.target

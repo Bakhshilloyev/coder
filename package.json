@@ -1,0 +1,17 @@
+{
+  "name": "unified-ai-agent",
+  "version": "0.1.0",
+  "description": "Cross-platform AI agent (Linux, Windows, Termux) with a pure-Python core and optional web UI.",
+  "type": "module",
+  "scripts": {
+    "dev": "python -m agent.main",
+    "server": "python -m agent.main server --port 8000"
+  },
+  "dependencies": {},
+  "optionalDependencies": {
+    "python-telegram-bot": "^21.0",
+    "discord.py": "^2.3",
+    "slack-bolt": "^1.18",
+    "PyGithub": "^2.3"
+  }
+}

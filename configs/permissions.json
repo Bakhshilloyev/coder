@@ -1,0 +1,11 @@
+{
+  "allow_shell": true,
+  "allow_network": false,
+  "allow_file_write": true,
+  "blocked_commands": [
+    "rm -rf /",
+    "mkfs",
+    "dd if=/dev/",
+    ":(){:|:&};:"
+  ]
+}

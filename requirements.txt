@@ -1,1 +1,8 @@
-# Optional providers can be added later.
+# Core dependencies (all pure-Python / stdlib). Keep minimal for Termux & 32-bit.
+# The agent runs with ZERO third-party packages by default (local provider).
+
+# Optional providers / features (install only what you use):
+# openai
+# anthropic
+# google-generativeai
+# groq

@@ -32,3 +32,18 @@ google-services.json
 
 # Android Profiling
 *.hprof
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+.pytest_cache/
+
+# Agent data / secrets
+data/
+.env
+*.db
+*.sqlite
+
